@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>SEA COMBAT TITLE</title>
+		<link rel="stylesheet" href="styles/styles.css"></link>
+		<script src="js/seaCombat_.js"></script>
+	</head>
+	<body>
+		<audio loop autoplay class="audio" id="audio" volume="0.05">
+			<source src="audio/sea.mp3">
+			<source src="audio/sea.wav">
+		</audio>
+		<div id="background"></div>
+		<div class="options">
+			<div class="option_sound button" id="sound_button">
+				<img id="sound_on" src="images/sound_on.png" alt="" class="option_sound_image sound_on">
+				<img hidden id="sound_off" src="images/sound_off.png" alt="" class="option_sound_image sound_off">
+			</div>
+			<div class="option_sound_volume" id="option_sound_volume">
+				<input type="range" class="option_sound_volume_range" min="0" max="1" step="0.05" value="1">
+				<img src="images/range.png" alt="" class="option_sound_volume_background">
+			</div>
+			<div id="option_back" class="option_back button">
+				<p class="option_back_inscription">назад</p>
+			</div>
+		</div>
+		<div class="page_1" id="page_1">
+			<div class="game_buttons">
+				<div class="game_button game_button_single_player button">
+					<div class="game_button_text_single_player">
+						<p class="game_button_text game_button_single_player_text_first_line">и г р а ю</p>
+						<p class="game_button_text game_button_single_player_text_second_line">с а м</p>
+					</div>
+					<img src="images/border.png" alt="" class="game_button_image game_button_single_player_image">
+				</div>
+				<div class="game_button game_button_two_players button">
+					<div class="game_button_text_two_players">
+						<p class="game_button_text game_button_two_players_text_first_line">и г р а е м</p>
+						<p class="game_button_text game_button_two_players_text_second_line">в д в о ё м</p>
+					</div>
+					<img src="images/border.png" alt="" class="game_button_image game_button_two_players_image">
+				</div>
+			</div>
+		</div>
+		<div hidden class="page_2" id="page_2">
+			<div class="field">
+				<img src="images/field_border.png" alt="" class="field_border">
+				<div class="field_column_names">
+					<p class="field_column_name_a field_column_name">а</p>
+					<p class="field_column_name_b field_column_name">б</p>
+					<p class="field_column_name_v field_column_name">в</p>
+					<p class="field_column_name_g field_column_name">г</p>
+					<p class="field_column_name_d field_column_name">д</p>
+					<p class="field_column_name_e field_column_name">е</p>
+					<p class="field_column_name_j field_column_name">ж</p>
+					<p class="field_column_name_z field_column_name">з</p>
+					<p class="field_column_name_i field_column_name">и</p>
+					<p class="field_column_name_k field_column_name">к</p>
+				</div>
+				<div class="field_line_names">
+					<p class="field_line_name field_line_name_1">1</p><br>
+					<p class="field_line_name field_line_name_2">2</p><br>
+					<p class="field_line_name field_line_name_3">3</p><br>
+					<p class="field_line_name field_line_name_4">4</p><br>
+					<p class="field_line_name field_line_name_5">5</p><br>
+					<p class="field_line_name field_line_name_6">6</p><br>
+					<p class="field_line_name field_line_name_7">7</p><br>
+					<p class="field_line_name field_line_name_8">8</p><br>
+					<p class="field_line_name field_line_name_9">9</p><br>
+					<p class="field_line_name field_line_name_10">10</p><br>
+				</div>
+			</div>
+			<div class="fleet" id="fleet">
+				<div class="fleet_ship fleet_4_deck">
+					<p class="fleet_ship_count">1</p>
+					<img src="images/X.png" alt="" class="fleet_x">
+					<div class="fleet_4_deck_ship fleet_ship_border not_active_ship"></div>
+				</div>
+				<div class="fleet_ship fleet_3_deck">
+					<p class="fleet_ship_count">2</p>
+					<img src="images/X.png" alt="" class="fleet_x">
+					<div class="fleet_3_deck_ship fleet_ship_border not_active_ship"></div>
+				</div>
+				<div class="fleet_ship fleet_2_deck">
+					<p class="fleet_ship_count">3</p>
+					<img src="images/X.png" alt="" class="fleet_x">
+					<div class="fleet_2_deck_ship fleet_ship_border not_active_ship"></div>
+				</div>
+				<div class="fleet_ship fleet_1_deck">
+					<p class="fleet_ship_count">4</p>
+					<img src="images/X.png" alt="" class="fleet_x">
+					<div class="fleet_1_deck_ship fleet_ship_border not_active_ship"></div>
+				</div>
+				<div class="fleet_4_deck_ship fleet_ship_border active_ship" id="10"></div>
+				<div class="fleet_3_deck_ship fleet_ship_border active_ship" id="9"></div>
+				<div class="fleet_3_deck_ship fleet_ship_border active_ship" id="8"></div>
+				<div class="fleet_2_deck_ship fleet_ship_border active_ship" id="7"></div>
+				<div class="fleet_2_deck_ship fleet_ship_border active_ship" id="6"></div>
+				<div class="fleet_2_deck_ship fleet_ship_border active_ship" id="5"></div>
+				<div class="fleet_1_deck_ship fleet_ship_border active_ship" id="4"></div>
+				<div class="fleet_1_deck_ship fleet_ship_border active_ship" id="3"></div>
+				<div class="fleet_1_deck_ship fleet_ship_border active_ship" id="2"></div>
+				<div class="fleet_1_deck_ship fleet_ship_border active_ship" id="1"></div>
+			</div>
+			<div class="player_form">
+				<p><input type="text" class="player_name" id="player_name"></p>
+				<div class="button player_form_autocompile">
+					<p class="player_form_autocompile_inscription autocompile_line_1">расставить</p>
+					<p class="player_form_autocompile_inscription autocompile_line_2">автоматичесски</p>
+				</div>
+				<div class="button player_form_quick_start">
+					<p class="player_form_quick_start_inscription quick_start_line_1">быстрый</p>
+					<p class="player_form_quick_start_inscription quick_start_line_2">старт</p>
+				</div>
+				<div class="button player_form_fight">
+					<p class="player_form_fight_inscription" style="width: 100px;">В БОЙ</p>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
